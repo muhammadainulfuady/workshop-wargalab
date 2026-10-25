@@ -1,0 +1,17 @@
+{
+  "name": "mini-krs-mahasiswa-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplikasi Mini KRS Mahasiswa Fullstack (React + Vite + Tailwind CSS & Laravel 13 + SQLite) untuk Demo Seminar AI",
+  "scripts": {
+    "setup:backend": "cd backend && composer install && php artisan migrate:fresh --seed",
+    "setup:frontend": "cd frontend && npm install",
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "dev:backend": "cd backend && php artisan serve --host=127.0.0.1 --port=8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "lint:frontend": "cd frontend && npm run lint",
+    "test:backend": "cd backend && php artisan test",
+    "db:reset": "cd backend && php artisan migrate:fresh --seed"
+  }
+}
